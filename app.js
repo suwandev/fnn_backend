@@ -25,12 +25,12 @@ var userIds =''
 // })
 
 app.get('/', (req, res) => {
-    res.status(200).end();
-})
+    res.status(200).send({message: "Successfuly"})
+});
 
-app.post('/', (req, res) => {
-    res.status(200).end();
-})
+// app.post('/', (req, res) => {
+//     res.status(200).send({message: "Successfuly"})
+// });
 // webhook callback
 app.post('/webhook', line.middleware(config), (req, res) => {
   // req.body.events should be an array of events
