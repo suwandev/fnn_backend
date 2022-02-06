@@ -89,8 +89,14 @@ function handleEvent(event) {
                         
                         return  handleText(msg, event.replyToken);
                     });
-            }else{
+            }else if(message.text === 'Register'){
                  msg = {
+                    type:'text',
+                    text: `${event.source.userId}`
+                }
+                return  handleText(msg, event.replyToken);
+            }else{
+                msg = {
                     type:'text',
                     text: `${message.text}`
                 }
