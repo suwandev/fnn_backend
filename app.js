@@ -24,6 +24,13 @@ var userIds =''
 //     res.send(mys)
 // })
 
+app.get('/', (req, res) => {
+    res.status(200).end();
+})
+
+app.post('/', (req, res) => {
+    res.status(200).end();
+})
 // webhook callback
 app.post('/webhook', line.middleware(config), (req, res) => {
   // req.body.events should be an array of events
